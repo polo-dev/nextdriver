@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
 
+export class Login {
+  email: string;
+  password: string;
+}
+
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template:`<router-outlet></router-outlet>`,
+  styleUrls: ['css/app.component.css']
 })
+
 export class AppComponent {
-  title = 'app works!';
+  title = 'Connexion';
 }
