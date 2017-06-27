@@ -5,33 +5,44 @@
             <form class="form-horizontal" #inscriptionForm="ngForm">
                 <fieldset>
                     <legend>{{title}}</legend>
-                    <div class="form-group">
-                        <label for="firstname" class="col-xs-12 col-lg-2 control-label">test</label>
+                    <div class="form-group" [ngClass]="{'has-error' : birthdayError == true }">
+                        <label for="firstname" class="col-xs-12 col-lg-2 control-label">Date de naissance</label>
                         <div class="col-xs-12 col-lg-10">
-                            <input type="text" class="form-control" id="firstname" placeholder="firstname">
+                            <input type="date" class="form-control" name="birdthday" 
+                            [(ngModel)]="birthday" id="birthday" placeholder="Date de naissance (dd/mm/yyyy)">
                         </div>
                     </div>
-                     <div class="form-group">
-                        <label for="lastname" class="col-xs-12 col-lg-2 control-label">Nom</label>
+                    <div class="form-group" [ngClass]="{'has-error' : cityError == true }">
+                        <label for="searchCity" class="col-xs-12 col-lg-2 control-label">Adresse</label>
                         <div class="col-xs-12 col-lg-10">
-                            <input type="text" class="form-control" id="lastname" placeholder="lastname">
-                        </div>
-                    </div>
-                     <div class="form-group">
-                        <label for="email" class="col-xs-12 col-lg-2 control-label">Email</label>
-                        <div class="col-xs-12 col-lg-10">
-                            <input type="text" class="form-control" id="email" placeholder="email">
+                            <input placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" class="form-control" 
+                            #search [(ngModel)]="searchCity" name="searchCity" id="searchCity">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="city" class="col-lg-2 control-label">Ville</label>
-                        <div class="col-lg-10">
-                            <input type="city" class="form-control" id="city" placeholder="city">
+                        <label class="col-xs-12 control-label" for="gender">Genre</label>
+                        <div class="radio col-xs-6">
+                        <label>
+                            <input type="radio" name="gender" id="genderWomen" [(ngModel)]="gender" value="F" checked="">
+                            Femme
+                        </label>    
+                        </div>
+                        <div class="radio col-xs-6">
+                        <label>
+                            <input type="radio" name="gender" id="genderMen" [(ngModel)]="gender" value="H">
+                            Homme
+                        </label>
+                        </div>
+                    </div>
+                     <div class="form-group" [ngClass]="{'has-error' : phoneError == true }">
+                        <label for="lastname" class="col-xs-12 col-lg-2 control-label">Téléphone</label>
+                        <div class="col-xs-12 col-lg-10">
+                            <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="phone" minlength="7" placeholder="Téléphone">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
-                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                            <button type="submit" (click)="onSubmit()" class="btn btn-primary">S'inscrire</button>
                         </div>
                     </div>
                 </fieldset>
