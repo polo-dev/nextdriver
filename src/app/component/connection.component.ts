@@ -11,7 +11,6 @@ export class ConnectionComponent {
   email: string = '';
   password: string = '';
   error: string = null;
-  isClassVisible: true;
   emailError: boolean = false;
   passwordError: boolean = false;
 

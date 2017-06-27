@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router'
 // export class Login {
 //   email: string;
 //   password: string;
@@ -12,5 +12,17 @@ import { Component } from '@angular/core';
 })
 
 export class Inscription2Component {
-  title = 'Inscription';
+  constructor(
+    private router: Router,
+  ) {}
+
+  title = 'Inscription - étape 2';
+  birthday:string = '';
+  age: number = null;
+  sexe: any = {1: 'Femme', 2: 'Homme'};
+  lastname: string = '';
+  emailError: boolean = false;
+  passwordError: boolean = false;
+  firstnameError: boolean = false;
+  lastnameError: boolean = false;
 }
