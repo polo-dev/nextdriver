@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div class="row">
+        <div class="dashboard-progression">
+            {{progression.total}}<br />
+            {{progression.code}}<br />
+            {{progression.driving}}<br />
+        </div>
+    </div>
+    <div class="dashboard-block" *ngIf="nextCourse != null">
+        Prochain cours<br />
+        {{nextCourse.date}} à {{nextCourse.hour}}<br />
+        {{nextCourse.place}}<br />
+    </div>
+
+    <div class="dashboard-block" *ngIf="examDate != null">
+        {{examDate}}<br />
+    </div>
+</div>
+
+<router-outlet></router-outlet>

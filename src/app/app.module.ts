@@ -9,14 +9,15 @@ import { AgmCoreModule } from "@agm/core";
 import { LocalStorageModule } from 'angular-2-local-storage';
 
 import { AppRoutingModule }        from './app-routing.module';
-import { InscriptionComponent } from './component/inscription.component'; 
-import { Inscription2Component } from './component/inscription_2.component'; 
+import { InscriptionComponent } from './component/inscription.component';
+import { Inscription2Component } from './component/inscription_2.component';
 import { ConnectionComponent } from './component/connection.component';
 import { QuestionComponent } from 'app/component/question.component';
 import { TestComponent } from 'app/component/test';
 import { QuestionInfoComponent } from 'app/component/question_info.component';
 import { AnswerComponent } from 'app/component/answer.component';
 import { AvailabilityComponent } from 'app/component/availability.component';
+import { DashboardComponent } from 'app/component/dashboard.component';
 
 import { ApiService } from 'app/service/api.service';
 
@@ -31,7 +32,8 @@ import { ApiService } from 'app/service/api.service';
     TestComponent,
     QuestionInfoComponent,
     AnswerComponent,
-    AvailabilityComponent
+    AvailabilityComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
