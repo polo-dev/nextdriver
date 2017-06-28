@@ -1,5 +1,39 @@
 <div class="container">
   <div class="row">
-    test
+    <div class="header-inscription">
+      {{title}}
+    </div>
+    <div class="result-percentage">
+       <div class="c100 p{{percentage-delay}} big percentage">
+        <span>{{ percentage }}%</span>
+        <div class="slice">
+          <div class="bar"></div>
+          <div class="fill"></div>
+        </div>
+      </div>
+    </div>
+    <div class="result-text">
+      <div *ngIf="percentage == 40" class="text">
+          <h2>Niveau Confirmé</h2>
+          <p>Excellent ! Vous avez l'air d'être à l'aise avec le code de la route.
+            Nos voiture s'adapterons à votre niveau.
+          </p>
+      </div>
+      <div *ngIf="percentage >= 80 && percentage < 100" class="text">
+         <h2>Niveau Débutant</h2>
+          <p>Vous avez du mal avec le code, nos voiture adapterons leur programme à votre niveau !</p>
+      </div>
+      <div *ngIf="percentage >= 50 && percentage < 80" class="text">
+         <h2>Niveau Débutant</h2>
+          <p>Vous avez du mal avec le code, nos voiture adapterons leur programme à votre niveau !</p>
+      </div>
+      <div *ngIf="percentage < 40" class="text">
+          <h2>Niveau Débutant</h2>
+          <p>Vous avez du mal avec le code, nos voiture adapterons leur programme à votre niveau !</p>
+      </div>
+    </div>
+    <div class="block-next">
+      <button class="btn-app">Suivant</button>
+    </div>
   </div>
 </div>

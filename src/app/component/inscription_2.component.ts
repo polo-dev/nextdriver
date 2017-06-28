@@ -79,7 +79,7 @@ export class Inscription2Component implements OnInit {
           console.log(place.address_components[place.address_components.length - 1].short_name);
           console.log(place.formatted_address);
           this.adressName = place.name;
-          this.searchCity = place.vicinity;
+          this.searchCity = place.formatted_address;//place.vicinity;
           this.codePostal = place.address_components[place.address_components.length - 1].short_name;
           this.fullAdress = place.formatted_address;
           //verify result

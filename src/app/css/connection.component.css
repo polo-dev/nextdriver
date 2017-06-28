@@ -5,9 +5,12 @@
 }
 .logo-div .logo {
     margin: auto;
+    margin-top: 10vh;
     height: 150px;
     width: 150px;
-    background-color: bisque;
+    background: url('../../assets/images/logo-basic-black-moyen.png') no-repeat;
+    background-position-x: 50%;
+    background-size: contain;
 }
 form {
   margin-top: 25%;

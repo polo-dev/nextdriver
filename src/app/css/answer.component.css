@@ -1,0 +1,23 @@
+
+.result-text {
+  text-align: center;
+}
+.result-text .text {
+  padding: 0 10px;
+  height: 20vh;
+  min-height: 80px;
+}
+.result-text .text p {
+  font-size: 1.3em;
+}
+.result-percentage {
+  display: flex;
+  margin-top: 5vh;
+  height: 45vh;
+}
+.result-percentage .percentage {
+  margin: auto;
+}
+.block-next {
+  height: 10vh;
+}
