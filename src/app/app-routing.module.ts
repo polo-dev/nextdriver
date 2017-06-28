@@ -7,6 +7,7 @@ import { ConnectionComponent } from 'app/component/connection.component';
 import { QuestionComponent } from 'app/component/question.component';
 import { TestComponent } from 'app/component/test';
 import { QuestionInfoComponent } from 'app/component/question_info.component';
+import { AnswerComponent } from 'app/component/answer.component';
 
 
 const appRoutes: Routes = [
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
   { path: 'inscription/info', component: Inscription2Component },
   { path: 'questions', component: QuestionComponent },
   { path: 'questions/info', component: QuestionInfoComponent },
-  { path: 'test', component: TestComponent }
+  { path: 'test', component: TestComponent },
+  { path: 'questions/resultat', component: AnswerComponent}
 ];
 
 @NgModule({

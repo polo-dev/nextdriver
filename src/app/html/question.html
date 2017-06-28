@@ -3,6 +3,8 @@
     <div class="row">
         <div class="header-questions">
             <p>{{ questions.q}}</p>
+            <span class="glyphicon glyphicon-remove exit" aria-hidden="true"></span>
+            <span class="turn">{{ turn + 1 }}</span>
         </div>
         <form class="form-horizontal" #loginForm="ngForm">
             <fieldset>

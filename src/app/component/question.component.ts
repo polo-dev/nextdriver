@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocalStorageService } from 'angular-2-local-storage';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,8 @@ import { Router } from '@angular/router';
 export class QuestionComponent {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private localStorageService: LocalStorageService
   ){}
   
   title: string = 'Code de la route';
@@ -45,15 +47,11 @@ export class QuestionComponent {
   submitQuestion() {
     this.selectedIdx = -1; 
     let a = this.selectedRep;
-    if(typeof a === 'undefined' || a.length < 1) 
+    if(typeof a != 'undefined' && a && a.length >= 1)  
     {
-
-    }
-    else 
-    {
-      this.turn = this.turn + 1;
-      if (this.turn <= 5) 
+      if (this.turn < 5) 
       {
+        this.turn = this.turn + 1;
         if(this.questions.rep == a)
         {
           this.answers.ok++;
@@ -68,11 +66,26 @@ export class QuestionComponent {
           this.questions = this.listQuestion[this.turn];
         }
         console.log(this.answers);
+        this.selectedRep = null;
+        if(this.turn == 5)
+        {
+          this.setLocalStorage("rep", this.answers);
+          this.router.navigate(['/questions/resultat']);
+        }
       }
       else 
       {
-        this.router.navigate(['/questions']);
+        this.setLocalStorage("rep", this.answers);
+        this.router.navigate(['/questions/resultat']);
       }
+    }
+  }
+
+  setLocalStorage(key, rep)
+  {
+    if(this.localStorageService.isSupported) 
+    {
+      this.localStorageService.set(key, rep);
     }
   }
 }

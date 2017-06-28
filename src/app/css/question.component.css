@@ -26,7 +26,7 @@ button.btn-app {
 
 /* questions */
 .header-questions {
-  height: 20vh;
+  height: 23vh;
   background-color: grey;
   color: white;
   text-align: center;
@@ -35,6 +35,18 @@ button.btn-app {
 .header-questions p {
   padding: 0 10px;
   padding-top: 5vh;
+}
+.header-questions span.exit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #F44336;
+}
+.header-questions span.turn {
+  position: absolute;
+  left: 5vw;
+  top: 15vh;
+  font-size: 1.4em;
 }
 
 .answer {
@@ -63,7 +75,7 @@ button.btn-app {
   color: #2ecc71;
 }
 .block-rep {
-  height: 20vh;
+  height: 17vh;
 }
 .block-rep .rep {
   height: 100%;

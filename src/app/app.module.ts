@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {OnsenModule} from 'ngx-onsenui';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { AgmCoreModule } from "@agm/core";
+import { LocalStorageModule } from 'angular-2-local-storage';
 
 import { AppRoutingModule }        from './app-routing.module';
 import { InscriptionComponent } from './component/inscription.component'; 
@@ -14,6 +15,8 @@ import { ConnectionComponent } from './component/connection.component';
 import { QuestionComponent } from 'app/component/question.component';
 import { TestComponent } from 'app/component/test';
 import { QuestionInfoComponent } from 'app/component/question_info.component';
+import { AnswerComponent } from 'app/component/answer.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { QuestionInfoComponent } from 'app/component/question_info.component';
     Inscription2Component,
     QuestionComponent,
     TestComponent,
-    QuestionInfoComponent
+    QuestionInfoComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,10 @@ import { QuestionInfoComponent } from 'app/component/question_info.component';
       apiKey: "AIzaSyAu2VNTjUAkY8LunWGSqqtKzYXmeOYbf1A",
       libraries: ["places"]
     }),
+    LocalStorageModule.withConfig({
+        prefix: 'next-driver',
+        storageType: 'localStorage'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],
