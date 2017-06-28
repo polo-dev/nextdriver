@@ -1,18 +1,21 @@
 
 .result-text {
   text-align: center;
+  height: 100%;
+  min-height: 20vh;
 }
 .result-text .text {
   padding: 0 10px;
-  height: 20vh;
-  min-height: 80px;
 }
 .result-text .text p {
   font-size: 1.3em;
 }
+.result-text .text h2 {
+  margin-top: 15px;
+}
 .result-percentage {
   display: flex;
-  margin-top: 5vh;
+  margin-top: 4vh;
   height: 45vh;
 }
 .result-percentage .percentage {
@@ -20,4 +23,8 @@
 }
 .block-next {
   height: 10vh;
+}
+.block-next .link-button {
+  width: 80%;
+  margin: auto;
 }

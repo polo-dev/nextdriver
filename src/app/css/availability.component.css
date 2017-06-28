@@ -1,0 +1,24 @@
+.bi-availability td {
+    border: 2px solid white;
+}
+
+#availability tbody {
+  font-size: 0.85em;
+}
+
+#availability .NO {
+    background-color: #FFF5DF;
+} 
+
+#availability table td, #availability table th, #howItWorks .costs table, #howItWorks .costs tbody {
+    text-align: center;
+}
+
+#availability table td:hover, #availability table th:hover {
+    color: #5a2149;
+    background-color: #FFC422;
+}
+
+#availability .YES {
+    background-color: #FFC422!important;
+}

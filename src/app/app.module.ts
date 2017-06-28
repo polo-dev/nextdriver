@@ -16,6 +16,7 @@ import { QuestionComponent } from 'app/component/question.component';
 import { TestComponent } from 'app/component/test';
 import { QuestionInfoComponent } from 'app/component/question_info.component';
 import { AnswerComponent } from 'app/component/answer.component';
+import { AvailabilityComponent } from 'app/component/availability.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AnswerComponent } from 'app/component/answer.component';
     QuestionComponent,
     TestComponent,
     QuestionInfoComponent,
-    AnswerComponent
+    AnswerComponent,
+    AvailabilityComponent
   ],
   imports: [
     BrowserModule,

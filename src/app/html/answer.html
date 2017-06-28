@@ -4,7 +4,7 @@
       {{title}}
     </div>
     <div class="result-percentage">
-       <div class="c100 p{{percentage-delay}} big percentage">
+       <div class="c100 p{{percentage_delay}} big percentage">
         <span>{{ percentage }}%</span>
         <div class="slice">
           <div class="bar"></div>
@@ -13,27 +13,27 @@
       </div>
     </div>
     <div class="result-text">
-      <div *ngIf="percentage == 40" class="text">
+      <div *ngIf="percentage == 100" class="text">
           <h2>Niveau Confirmé</h2>
           <p>Excellent ! Vous avez l'air d'être à l'aise avec le code de la route.
             Nos voiture s'adapterons à votre niveau.
           </p>
       </div>
       <div *ngIf="percentage >= 80 && percentage < 100" class="text">
-         <h2>Niveau Débutant</h2>
-          <p>Vous avez du mal avec le code, nos voiture adapterons leur programme à votre niveau !</p>
+         <h2>Niveau Intermédiaire</h2>
+          <p>Très Bon résultat, avec nos voiture et votre niveau actuel vous aurez le code en moins de deux!</p>
       </div>
       <div *ngIf="percentage >= 50 && percentage < 80" class="text">
-         <h2>Niveau Débutant</h2>
-          <p>Vous avez du mal avec le code, nos voiture adapterons leur programme à votre niveau !</p>
+         <h2>Niveau Intermédiaire</h2>
+          <p>Résultat correct mais il y a encore du travail, nos voiture adapterons leur programme à votre niveau !</p>
       </div>
-      <div *ngIf="percentage < 40" class="text">
+      <div *ngIf="percentage < 50" class="text">
           <h2>Niveau Débutant</h2>
           <p>Vous avez du mal avec le code, nos voiture adapterons leur programme à votre niveau !</p>
       </div>
     </div>
     <div class="block-next">
-      <button class="btn-app">Suivant</button>
+      <a routerLink="/inscription/availability" class="link-button" routerLinkActive="active">Suivant</a>
     </div>
   </div>
 </div>
