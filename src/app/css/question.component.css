@@ -1,0 +1,75 @@
+.content-info-test {
+  margin-top: 30%;
+}
+.block-info-test {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+}
+
+.block-take-test {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+button.btn-app-big {
+  width: 80%;
+  border: none;
+  height: 60px;
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+
+button.btn-app {
+  width: 60%;
+}
+
+/* questions */
+.header-questions {
+  height: 20vh;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header-questions p {
+  padding: 0 10px;
+  padding-top: 5vh;
+}
+
+.answer {
+  display: flex;
+  text-align: center;
+  height: 15vh;
+  border-bottom: solid 2px grey;
+  background-color: white;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.answer.active {
+    background-color: grey;
+    color: white;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    -moz-transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+}
+.answer p {
+  margin: auto;
+}
+.answer span.glyphicon {
+  left: -5vw;
+  top: 3vh;
+  color: #2ecc71;
+}
+.block-rep {
+  height: 20vh;
+}
+.block-rep .rep {
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1.6em;
+}

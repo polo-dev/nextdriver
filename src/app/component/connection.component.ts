@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: '../html/connection.html',
-  styleUrls: ['../css/app.component.css']
+  styleUrls: ['../css/connection.component.css']
 })
 
 export class ConnectionComponent {

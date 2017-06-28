@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: '../html/inscription_step1.html',
-  styleUrls: ['../css/app.component.css']
+  styleUrls: ['../css/inscription.component.css']
 })
 
 export class InscriptionComponent {

@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone, ElementRef, Renderer } from '@angular/core';
+import { OnInit, NgZone, ElementRef, Renderer, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MapsAPILoader } from '@agm/core';
 import { ViewChild } from "@angular/core/src/metadata/di";
@@ -11,7 +11,7 @@ import { ViewChild } from "@angular/core/src/metadata/di";
 @Component({
   selector: 'app-root',
   templateUrl: '../html/inscription_step2.html',
-  styleUrls: ['../css/app.component.css']
+  styleUrls: ['../css/inscription.component.css']
 })
 
 export class Inscription2Component implements OnInit {
@@ -27,7 +27,7 @@ export class Inscription2Component implements OnInit {
     private rd: Renderer
   ) {}
 
-  title = 'Inscription - étape 2';
+  title = 'Inscription';
   birthday:string = '';
   gender: any = 'F';
   phone: any = '';
@@ -44,7 +44,7 @@ export class Inscription2Component implements OnInit {
     if(!this.validationErrors())
     {
       console.log(this.gender);
-      this.router.navigate(['/questions']);
+      this.router.navigate(['questions/info']);
     }
   }
 
@@ -67,7 +67,6 @@ export class Inscription2Component implements OnInit {
 
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
-      console.log(this.city);
       let autocomplete = new google.maps.places.Autocomplete( this.city.nativeElement , {
         types: ["address"]
       });

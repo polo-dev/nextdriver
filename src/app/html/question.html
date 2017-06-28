@@ -1,20 +1,23 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
-            <form class="form-horizontal" #loginForm="ngForm">
-                <fieldset>
-                    <legend>{{title}}</legend>
-                    <div class="col-xs-12">
-                      {{ questions.q}}
+        <div class="header-questions">
+            <p>{{ questions.q}}</p>
+        </div>
+        <form class="form-horizontal" #loginForm="ngForm">
+            <fieldset>
+                <div *ngFor="let a of questions.answer; let i = index">
+                    <div class="answer" [ngClass]="{'active' : selectedIdx === i }" (click)="selectItem(i, a)">
+                        <p>{{ a }}</p>
+                        <span *ngIf="selectedIdx === i" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                     </div>
-                    <div class="col-xs-12" *ngFor="let a of questions.answer; let i = index">
-                      <div class="answer" (click)="submitQuestion(a, i)">
-                          {{ a }}
-                      </div>
-                    </div>
-                </fieldset>
-            </form>
+                </div>
+            </fieldset>
+        </form>
+        <div class="block-rep">
+            <button class="rep" (click)="submitQuestion()">
+                Répondre
+            </button>
         </div>
     </div>
 </div>

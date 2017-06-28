@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: '../html/question.html',
-  styleUrls: ['../css/app.component.css']
+  styleUrls: ['../css/question.component.css']
 })
 
 export class QuestionComponent {
@@ -13,8 +13,10 @@ export class QuestionComponent {
     private router: Router
   ){}
   
-  title: string = 'Test de connaissance';
+  title: string = 'Code de la route';
   turn: number = 0;
+  selectedIdx = -1;
+  selectedRep: string;
   answers = {
     ok : 0,
     notOk : 0
@@ -24,39 +26,53 @@ export class QuestionComponent {
     {q: 'Qu\'elle est la distance de sécurité minimun ? ',
     answer : ['2 m', '1 m 50','1 m','50 cm'], rep : '1 m 50'},
     {q: 'Combien de roue à une voiture ? ',
-    answer : ['1', '2','4','5'], rep : '5'},
+    answer : ['1', '2','4','5'], rep : '5', wasClick: false},
     {q: 'Qu\'elle est la distance de sécurité minimun ? ',
-    answer : ['2 m', '1 m 50','1 m','50 cm'], rep: '1 m 50'},
+    answer : ['2 m', '1 m 50','1 m','50 cm'], rep: '1 m 50', wasClick: false},
     {q: 'Qu\'elle est la distance de sécurité minimun ?',
-    answer : ['2 m', '1 m 50','1 m','50 cm'], rep: '1 m 50'},
+    answer : ['2 m', '1 m 50','1 m','50 cm'], rep: '1 m 50', wasClick: false},
     {q: 'Qu\'elle est la distance de sécurité minimun ?  dernier test',
-    answer : ['2 m', '1 m 50','1 m','50 cm'], rep: '1 m 50'},
+    answer : ['2 m', '1 m 50','1 m','50 cm'], rep: '1 m 50', wasClick: false},
   ]
 
   questions = this.listQuestion[0];
 
-  submitQuestion(a ,i) {
-    this.turn = this.turn + 1;
-    if (this.turn <= 5) 
-    {
-      if(this.questions.rep == a)
-      {
-        this.answers.ok++;
-      }
-      else 
-      {
-        this.answers.notOk++;
-      }
+  selectItem(index, rep):void {
+    this.selectedIdx = index;
+    this.selectedRep = rep;
+  }
 
-      if(this.turn < 5)
-      {
-        this.questions = this.listQuestion[this.turn];
-      }
-      console.log(this.answers);
+  submitQuestion() {
+    this.selectedIdx = -1; 
+    let a = this.selectedRep;
+    if(typeof a === 'undefined' || a.length < 1) 
+    {
+
     }
     else 
     {
-      this.router.navigate(['/questions']);
+      this.turn = this.turn + 1;
+      if (this.turn <= 5) 
+      {
+        if(this.questions.rep == a)
+        {
+          this.answers.ok++;
+        }
+        else 
+        {
+          this.answers.notOk++;
+        }
+
+        if(this.turn < 5)
+        {
+          this.questions = this.listQuestion[this.turn];
+        }
+        console.log(this.answers);
+      }
+      else 
+      {
+        this.router.navigate(['/questions']);
+      }
     }
   }
 }

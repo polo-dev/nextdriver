@@ -1,0 +1,14 @@
+
+.logo-div {
+  height: 200px;
+  display: flex; 
+}
+.logo-div .logo {
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    background-color: bisque;
+}
+form {
+  margin-top: 25%;
+}
