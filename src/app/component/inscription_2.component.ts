@@ -31,7 +31,7 @@ export class Inscription2Component implements OnInit {
 
   title = 'Inscription';
   birthday:string = '';
-  gender: any = 'F';
+  gender: any = 'f';
   phone: any = '';
   cityError: boolean = false;
   birthdayError: boolean = false;
@@ -54,6 +54,8 @@ export class Inscription2Component implements OnInit {
       }
        this.api.createAccount2(data)
         .then((rep) => {
+
+          console.log(JSON.parse(rep._body).responseCode);
 
           if(JSON.parse(rep._body).responseCode !== 200) 
           {

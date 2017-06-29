@@ -19,8 +19,8 @@ export class ApiService {
     let urlPost = 'user/login';
 
     let urlSearchParams = new URLSearchParams();
-    urlSearchParams.append("form[plain_password]", data.password);
-    urlSearchParams.append("form[email]", data.email);
+    urlSearchParams.append("password", data.password);
+    urlSearchParams.append("email", data.email);
     let param = urlSearchParams.toString();
 
     return this.postData(param, urlPost);

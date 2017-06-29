@@ -6,6 +6,8 @@ module.exports = function(context) {
     const basePath = context.opts.projectRoot;
     const baseWWW = basePath + '/www';
 
+    console.log(baseWWW);
+
     console.log(execSync(
       "ng build --target=production --environment=prod --output-path phonegap/www/ --base-href",
       {
