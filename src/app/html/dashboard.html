@@ -1,0 +1,48 @@
+
+<div class="container">
+  <div class="row">
+    <div class="dashboard-progression">
+      <div class="result-percentage">
+        <div class="c100 p{{progression.total}} big percentage">
+          <span>{{progression.total}}%</span>
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-50">
+        <div class="progression">
+          <div class="progression-title">Coding</div>
+          <div class="progression-score">{{progression.code}}%</div>
+          <div class="progression-bloc">
+            <div class="progression-bar p{{progression.code}}"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-50">
+        <div class="progression">
+          <div class="progression-title">Driving</div>
+          <div class="progression-score">{{progression.driving}}%</div>
+          <div class="progression-bloc">
+            <div class="progression-bar p{{progression.driving}}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-block" *ngIf="nextCourse != null">
+    Prochain cours<br />
+    {{nextCourse.date}} à {{nextCourse.hour}}<br />
+    {{nextCourse.place}}<br />
+  </div>
+
+  <div class="dashboard-block" *ngIf="examDate != null">
+    {{examDate}}<br />
+  </div>
+</div>
+
+<router-outlet></router-outlet>
