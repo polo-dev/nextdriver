@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
+import { ApiService } from 'app/service/api.service';
 
 // export class Login {
 //   email: string;
@@ -15,6 +16,7 @@ import {Router} from '@angular/router';
 export class InscriptionComponent {
   constructor(
     private router: Router,
+    private api: ApiService
   ) {}
 
   title = 'Inscription';
@@ -28,10 +30,31 @@ export class InscriptionComponent {
   lastnameError: boolean = false;
 
   submitInscription() {
+    let that = this;
     if(!this.validationErrors())
     {
       console.log(this.firstname);
-      this.router.navigate(['/inscription/info']);
+      let data = {
+        password: this.password,
+        firstName: this.firstname,
+        lastName: this.lastname,
+        email: this.email
+      }
+      this.api.createAccount(data)
+        .then((rep) => {
+          console.log(rep);
+          console.log(JSON.parse(rep._body).responseCode);
+          if(JSON.parse(rep._body).responseCode == 100) 
+          {
+            console.log('error');
+          }
+          else 
+          {
+            this.api.setUserId(JSON.parse(rep._body).content.userId);
+            this.router.navigate(['/inscription/info']);
+          }
+        })
+        .catch((e) => console.log(e));
     }
   }
 

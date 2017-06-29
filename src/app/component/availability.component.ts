@@ -1,6 +1,7 @@
-import { OnInit, Component } from '@angular/core';
+import { OnInit, Component, ElementRef, Renderer } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalStorageService } from 'angular-2-local-storage';
+import { ViewChild } from "@angular/core/src/metadata/di";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +10,23 @@ import { LocalStorageService } from 'angular-2-local-storage';
 })
 
 export class AvailabilityComponent implements OnInit {
+  @ViewChild("availability") table:ElementRef;
   title: string = 'Vos disponiblité';
+  availability:any = [];
+  constructor(private rd: Renderer){}
+
   ngOnInit() {
 
+  }
+
+  onClickTable() {
+    
+    let a = this.table.nativeElement.querySelectorAll('td.YES')
+    this.availability = [];
+    let that = this;
+    a.forEach(function (td) {
+      that.availability.push({ day: td.dataset.day, hour: td.dataset.hour });
+    });
+    console.log(this.availability);
   }
 }

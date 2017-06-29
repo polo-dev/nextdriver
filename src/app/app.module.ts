@@ -18,6 +18,8 @@ import { QuestionInfoComponent } from 'app/component/question_info.component';
 import { AnswerComponent } from 'app/component/answer.component';
 import { AvailabilityComponent } from 'app/component/availability.component';
 
+import { ApiService } from 'app/service/api.service';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { AvailabilityComponent } from 'app/component/availability.component';
         storageType: 'localStorage'
     })
   ],
-  providers: [],
+  providers: [
+    ApiService
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

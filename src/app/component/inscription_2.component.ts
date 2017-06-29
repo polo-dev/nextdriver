@@ -2,6 +2,7 @@ import { OnInit, NgZone, ElementRef, Renderer, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MapsAPILoader } from '@agm/core';
 import { ViewChild } from "@angular/core/src/metadata/di";
+import { ApiService } from 'app/service/api.service';
 
 // export class Login {
 //   email: string;
@@ -24,7 +25,8 @@ export class Inscription2Component implements OnInit {
     private router: Router,
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone,
-    private rd: Renderer
+    private rd: Renderer,
+    private api: ApiService
   ) {}
 
   title = 'Inscription';
@@ -44,7 +46,25 @@ export class Inscription2Component implements OnInit {
     if(!this.validationErrors())
     {
       console.log(this.gender);
-      this.router.navigate(['questions/info']);
+      let data = {
+        birthDate: this.birthday,
+        civility: this.gender,
+        phoneNumber: this.phone,
+        address: this.fullAdress
+      }
+       this.api.createAccount2(data)
+        .then((rep) => {
+
+          if(JSON.parse(rep._body).responseCode !== 200) 
+          {
+            console.log('error');
+          }
+          else 
+          {
+            this.router.navigate(['questions/info']);
+          }
+        })
+        .catch((e) => console.log(e));
     }
   }
 

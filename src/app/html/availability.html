@@ -3,8 +3,8 @@
     <div class="header-inscription">
       {{title}}
     </div>
-    <div class="col-xs-12" id="availability">
-    <table class="table bi-availability text-center">
+    <div class="col-xs-12" id="availability" #availability>
+    <table class="table bi-availability text-center" (click)="onClickTable()">
       <tr>
           <th class="NEVER"><span class="hidden-xs"></span></th>
                                                                   <th class="DAY toggle-day " data-active="0" data-day="0">Lun.</th>
