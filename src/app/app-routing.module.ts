@@ -24,7 +24,7 @@ const appRoutes: Routes = [
   { path: 'test', component: TestComponent },
   { path: 'questions/resultat', component: AnswerComponent},
   { path: 'inscription/availability', component: AvailabilityComponent },
-  { path: 'how', component: HowComponent}
+  { path: 'how', component: HowComponent},
   { path: 'credit', component: CreditComponent }
 ];
 
