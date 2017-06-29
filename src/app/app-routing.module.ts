@@ -11,6 +11,7 @@ import { AnswerComponent } from 'app/component/answer.component';
 import { AvailabilityComponent } from 'app/component/availability.component';
 import { HowComponent } from 'app/component/how.component';
 import { DashboardComponent } from 'app/component/dashboard.component';
+import { CreditComponent } from 'app/component/credit.component';
 
 
 const appRoutes: Routes = [
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
   { path: 'questions/resultat', component: AnswerComponent},
   { path: 'inscription/availability', component: AvailabilityComponent },
   { path: 'how', component: HowComponent}
+  { path: 'credit', component: CreditComponent }
 ];
 
 @NgModule({
