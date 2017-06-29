@@ -1,5 +1,5 @@
 .bi-availability td {
-    border: 2px solid white;
+    border: 2px solid transparent;
 }
 
 #availability {
@@ -12,7 +12,7 @@
 }
 
 #availability .NO {
-    background-color: #FFF5DF;
+    background-color: #f4f7f7;;
 } 
 
 #availability table td, #availability table th, #howItWorks .costs table, #howItWorks .costs tbody {
@@ -21,11 +21,11 @@
 
 #availability table td:hover, #availability table th:hover {
     color: #5a2149;
-    background-color: #FFC422;
+    background-color: #00DFFE;
 }
 
 #availability .YES {
-    background-color: #FFC422!important;
+    background-color: #00DFFE!important;
 }
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {

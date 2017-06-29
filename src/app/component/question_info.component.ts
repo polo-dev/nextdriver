@@ -16,6 +16,6 @@ export class QuestionInfoComponent {
     this.router.navigate(['/questions']);
   }
   goToAvailability() {
-    console.log('soon');
+    this.router.navigate(['inscription/availability']);
   }
 }

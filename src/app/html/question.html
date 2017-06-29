@@ -3,12 +3,14 @@
     <div class="row" *ngIf="dataLoad">
         <div class="header-questions">
             <p *ngIf="questions">{{ questions.question}}</p>
-            <span class="glyphicon glyphicon-remove exit" aria-hidden="true"></span>
+            <a routerLink="../inscription/availability" routerLinkActive="active">
+                <span class="exit" aria-hidden="true" style="text-transform: capitalize">Skip</span>
+            </a>
             <span class="turn">{{ turn + 1 }}</span>
         </div>
         <form class="form-horizontal" #loginForm="ngForm">
             <fieldset *ngIf="listAnswers">
-                <div *ngFor="let a of listAnswers; let i = index">
+                <div *ngFor="let a of listAnswers; let i = index" class="answer-block">
                     <div class="answer" [ngClass]="{'active' : selectedIdx === i }" (click)="selectItem(i,a)">
                         <p>{{ a }}</p>
                         <span *ngIf="selectedIdx === i" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
@@ -16,7 +18,7 @@
                 </div>
             </fieldset>
         </form>
-        <div class="block-rep">
+        <div class="block-rep align-center">
             <button class="rep" (click)="submitQuestion()">
                 Répondre
             </button>

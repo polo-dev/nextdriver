@@ -1,17 +1,13 @@
-form {
-  margin-top: 5vh;
-}
 
 form .form-group {
   margin-bottom: 0;
-  height: 14vh;
+  height: 13vh;
 }
 
 .header-inscription {
-    height: 25vh;
+    height: 35vh;
     line-height: 25vh;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+    background-position-y: 90%;
     background-position-x: 50%;
-    background-position-y: 50%;
+    background-size: 110% auto;
 }
