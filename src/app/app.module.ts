@@ -19,6 +19,7 @@ import { AnswerComponent } from 'app/component/answer.component';
 import { AvailabilityComponent } from 'app/component/availability.component';
 import { HowComponent } from 'app/component/how.component';
 import { DashboardComponent } from 'app/component/dashboard.component';
+import { CreditComponent } from 'app/component/credit.component';
 
 import { ApiService } from 'app/service/api.service';
 
@@ -35,7 +36,8 @@ import { ApiService } from 'app/service/api.service';
     AnswerComponent,
     AvailabilityComponent,
     HowComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreditComponent
   ],
   imports: [
     BrowserModule,

@@ -34,6 +34,7 @@
           </div>
         </div>
       </div>
+      <div class="clearfix"></div>
     </div>
   </div>
 
@@ -44,8 +45,10 @@
   </div>
 
   <div class="dashboard-block" *ngIf="examDate != null">
-    {{examDate}}<br />
+    Votre examen est prévu le {{examDate}}
   </div>
+  <br />
+  <img src="../../assets/images/graphic.png" width="345">
 </div>
 
 <router-outlet></router-outlet>

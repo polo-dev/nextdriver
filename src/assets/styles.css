@@ -4,7 +4,7 @@
 
 .no-padding {
   padding-left: 0;
-  padding-right: 0; 
+  padding-right: 0;
 }
 .btn-app  {
   letter-spacing: 0.1em;
@@ -97,7 +97,8 @@ input.form-control, input[type=text] {
 }
 
 body {
-    background: url(../assets/images/background.png);
-    background-size: cover;
+    background-image: url('../assets/images/fond app.jpg');
+    background-position: center top;
+    background-size: 100% auto;
     font-family: Futura_Book_Reg;
 }
