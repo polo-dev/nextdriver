@@ -12,6 +12,7 @@
             <fieldset *ngIf="listAnswers">
                 <div *ngFor="let a of listAnswers; let i = index" class="answer-block">
                     <div class="answer" [ngClass]="{'active' : selectedIdx === i }" (click)="selectItem(i,a)">
+                        <span class="letter-question">{{ getChar(i) }}</span>
                         <p>{{ a }}</p>
                         <span *ngIf="selectedIdx === i" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                     </div>
@@ -19,7 +20,7 @@
             </fieldset>
         </form>
         <div class="block-rep align-center">
-            <button class="rep" (click)="submitQuestion()">
+            <button class="btn-app" (click)="submitQuestion()">
                 Répondre
             </button>
         </div>

@@ -2,7 +2,7 @@ import { OnInit, Component, ElementRef, Renderer } from '@angular/core';
 import { Router } from '@angular/router';
 import { LocalStorageService } from 'angular-2-local-storage';
 import { ViewChild } from "@angular/core/src/metadata/di";
-declare var jQuery: any;
+import { ApiService } from 'app/service/api.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,8 @@ export class AvailabilityComponent implements OnInit {
   availability:any = [];
   constructor(
     private rd: Renderer,
-    private router: Router
+    private router: Router,
+    private api: ApiService
   ){}
 
   ngOnInit() {
@@ -42,7 +43,30 @@ export class AvailabilityComponent implements OnInit {
   onSubmit() {
     if(this.availability.length > 0) 
     {
-      this.router.navigate(['how']);
+      let that = this;
+      let promise = new Promise((resolve, object) => {
+        for(let a in that.availability)
+        {
+          let data = {
+            day: that.availability[a].day + 1,
+            start: "15:00",
+            end: "17:00"
+          };
+          that.api.addAvailability(data);
+        }
+        window.setTimeout(
+          function() {
+            // On tient la promesse !
+            resolve("bien joué");
+          }, 1500);
+      });
+      promise.then(() => {
+        console.log('test');
+        that.router.navigate(['dashboard']);
+      })
+      .catch((e) => console.log(e));
+      
+      
     }
     else 
     {

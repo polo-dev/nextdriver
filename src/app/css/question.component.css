@@ -11,7 +11,7 @@
 
 .block-take-test {
   text-align: center;
-  margin-bottom: 10vh;
+  margin-bottom: 6vh;
 }
 
 .logo-div {
@@ -35,7 +35,9 @@ button.btn-app-big {
 }
 
 button.btn-app {
-  width: 60%;
+  width: 45%;
+  max-width: 150px;
+  margin: auto;
 }
 
 .header-inscription {
@@ -70,6 +72,7 @@ button.btn-app {
 .header-questions p {
   padding: 0 40px;
   margin: auto;
+  margin-top: 15%;
 }
 .header-questions span.exit {
   position: absolute;
@@ -82,6 +85,14 @@ button.btn-app {
   left: 5vw;
   top: 30vh;
   font-size: 1.4em;
+}
+
+span.letter-question {
+  line-height: 10vh;
+  position: relative;
+  left: 20px;
+  font-size: 1.5em;
+  text-transform: uppercase;
 }
 
 .answer-block {
@@ -117,7 +128,9 @@ button.btn-app {
 }
 .block-rep {
   height: 10vh;
+  display: flex;
 }
+
 .block-rep .rep {
   border: none;
   border-radius: 0;

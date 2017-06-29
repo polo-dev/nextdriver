@@ -63,6 +63,41 @@ export class ApiService {
     return this.postData(param, urlPost);
   }
 
+  saveExam(): Promise<any>{
+    let urlPost = 'exam/save';
+    
+    /* to do */
+
+    let urlSearchParams = new URLSearchParams();
+    urlSearchParams.append("userId", this.getUserId());
+    let param = urlSearchParams.toString();
+
+    return this.postData(param, urlPost);
+  }
+
+  addAvailability(data): Promise<any> {
+    let urlPost = 'availability/add';
+
+    let urlSearchParams = new URLSearchParams();
+    urlSearchParams.append("userId", this.getUserId());
+    urlSearchParams.append("day", data.day);
+    urlSearchParams.append("start", data.start);
+    urlSearchParams.append("end", data.end);
+    let param = urlSearchParams.toString();
+
+    return this.postData(param, urlPost);
+  }
+
+  getAvailability(): Promise<any> {
+    let urlPost = 'availability';
+
+    let urlSearchParams = new URLSearchParams();
+    urlSearchParams.append("userId", this.getUserId());
+    let param = urlSearchParams.toString();
+
+    return this.postData(param, urlPost);
+  }
+
   //send data to API
   private postData(param, urlPost): Promise<any>
   {

@@ -25,6 +25,7 @@ export class QuestionComponent implements OnInit {
     ok : 0,
     notOk : 0
   };
+  realList = [];
   listAnswers = [];
   listQuestion = [];
 
@@ -42,6 +43,9 @@ export class QuestionComponent implements OnInit {
           else 
           {
             this.listQuestion = [];
+            this.realList = [];
+            this.realList = body.content;
+            console.log(this.realList);
             for (var r in body.content)
             {
               this.listQuestion.push(body.content[r]);
@@ -74,7 +78,6 @@ export class QuestionComponent implements OnInit {
       {
         this.turn = this.turn + 1;
         console.log(this.questions.answers[this.questions.correct_answer]);
-  
         if(this.questions.answers[this.questions.correct_answer] == a)
         {
           this.answers.ok++;
@@ -107,6 +110,10 @@ export class QuestionComponent implements OnInit {
         this.router.navigate(['/questions/resultat']);
       }
     }
+  }
+
+  getChar(i) {
+    return String.fromCharCode(65 + i);
   }
 
   setLocalStorage(key, rep)
