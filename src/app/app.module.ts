@@ -17,6 +17,7 @@ import { TestComponent } from 'app/component/test';
 import { QuestionInfoComponent } from 'app/component/question_info.component';
 import { AnswerComponent } from 'app/component/answer.component';
 import { AvailabilityComponent } from 'app/component/availability.component';
+import { HowComponent } from 'app/component/how.component';
 
 import { ApiService } from 'app/service/api.service';
 
@@ -31,7 +32,8 @@ import { ApiService } from 'app/service/api.service';
     TestComponent,
     QuestionInfoComponent,
     AnswerComponent,
-    AvailabilityComponent
+    AvailabilityComponent,
+    HowComponent
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,15 @@
 
 <div class="container">
-    <div class="row">
+    <div class="row" *ngIf="dataLoad">
         <div class="header-questions">
-            <p>{{ questions.q}}</p>
+            <p *ngIf="questions">{{ questions.question}}</p>
             <span class="glyphicon glyphicon-remove exit" aria-hidden="true"></span>
             <span class="turn">{{ turn + 1 }}</span>
         </div>
         <form class="form-horizontal" #loginForm="ngForm">
-            <fieldset>
-                <div *ngFor="let a of questions.answer; let i = index">
-                    <div class="answer" [ngClass]="{'active' : selectedIdx === i }" (click)="selectItem(i, a)">
+            <fieldset *ngIf="listAnswers">
+                <div *ngFor="let a of listAnswers; let i = index">
+                    <div class="answer" [ngClass]="{'active' : selectedIdx === i }" (click)="selectItem(i,a)">
                         <p>{{ a }}</p>
                         <span *ngIf="selectedIdx === i" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                     </div>

@@ -50,8 +50,8 @@ export class InscriptionComponent {
           }
           else 
           {
-            this.api.setUserId(JSON.parse(rep._body).content.userId);
-            this.router.navigate(['/inscription/info']);
+            that.api.setUserId(JSON.parse(rep._body).content.userId);
+            that.router.navigate(['/inscription/info']);
           }
         })
         .catch((e) => console.log(e));

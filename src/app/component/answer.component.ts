@@ -23,9 +23,23 @@ export class AnswerComponent implements OnInit {
     let rep: any = this.getLocalStorageRep();
     this.percentage = ( rep.ok / 10 ) * 100;
     let that = this;
-    setTimeout(function() {
-      that.percentage_delay = ( rep.ok / 10 ) * 100;
-    }, 1000);
+    
+    //animation problem
+    if(this.percentage > 50) {
+       setTimeout(function() {
+        that.percentage_delay = 50;
+      }, 500);
+      setTimeout(function() {
+        that.percentage_delay = that.percentage;
+      }, 1850);
+    } 
+    else 
+    {
+      setTimeout(function() {
+        that.percentage_delay = that.percentage;
+      }, 1000);
+    }
+    
   }
 
   getLocalStorageRep()

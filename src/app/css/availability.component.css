@@ -4,6 +4,7 @@
 
 #availability {
   padding: 0 6px;
+  color: white;
 }
 
 #availability tbody {
@@ -29,4 +30,18 @@
 
 .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
     padding: 7px;
+}
+
+.table>tbody>tr>th {
+    border-top: none;
+}
+
+.header-inscription {
+    height: 30vh;
+    line-height: 20vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
 }

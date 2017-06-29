@@ -13,7 +13,10 @@ export class AvailabilityComponent implements OnInit {
   @ViewChild("availability") table:ElementRef;
   title: string = 'Vos disponiblité';
   availability:any = [];
-  constructor(private rd: Renderer){}
+  constructor(
+    private rd: Renderer,
+    private router: Router
+  ){}
 
   ngOnInit() {
 
@@ -21,12 +24,23 @@ export class AvailabilityComponent implements OnInit {
 
   onClickTable() {
     
-    let a = this.table.nativeElement.querySelectorAll('td.YES')
+    let a = this.table.nativeElement.querySelectorAll('td.YES');
     this.availability = [];
     let that = this;
     a.forEach(function (td) {
       that.availability.push({ day: td.dataset.day, hour: td.dataset.hour });
     });
     console.log(this.availability);
+  }
+
+  onSubmit() {
+    if(this.availability.length > 0) 
+    {
+      this.router.navigate(['how']);
+    }
+    else 
+    {
+      console.log('it\'s empty');
+    }
   }
 }

@@ -6,6 +6,10 @@
 }
 .result-text .text {
   padding: 0 10px;
+  color: white;
+}
+.result-text h2 {
+  color: white;
 }
 .result-text .text p {
   font-size: 1.3em;
@@ -15,7 +19,6 @@
 }
 .result-percentage {
   display: flex;
-  margin-top: 4vh;
   height: 45vh;
 }
 .result-percentage .percentage {
@@ -27,4 +30,14 @@
 .block-next .link-button {
   width: 80%;
   margin: auto;
+}
+
+.header-inscription {
+    height: 20vh;
+    line-height: 17vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
 }

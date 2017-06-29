@@ -4,5 +4,14 @@ form {
 
 form .form-group {
   margin-bottom: 0;
-  height: 16vh;
+  height: 14vh;
+}
+
+.header-inscription {
+    height: 25vh;
+    line-height: 25vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+    background-position-x: 50%;
+    background-position-y: 50%;
 }

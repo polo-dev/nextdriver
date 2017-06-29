@@ -9,19 +9,20 @@
                 <fieldset>
                     <div class="form-group"  [ngClass]="{'has-error' : emailError == true }">
                         <div class="col-xs-12 col-lg-10">
-                            <input required type="text" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" name="email">
+                            <input required type="text" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" name="email" autocomplete="new-password">
                             <p *ngIf="emailError" class="text-error">Vérifier votre adresse mail</p>
                         </div>
                     </div>
                     <div class="form-group" [ngClass]="{'has-error' : passwordError == true }">
                         <div class="col-lg-10">
-                            <input required type="password" class="form-control" id="password" placeholder="Mot de passe" [(ngModel)]="password" name="password">
+                            <input required type="password" class="form-control" id="password" placeholder="Mot de passe" [(ngModel)]="password" name="password" autocomplete="new-password">
                             <p *ngIf="passwordError" class="text-error">Vérifier votre mot de passe</p>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-lg-10 col-lg-offset-2">
                             <button type="submit" (click)="submitLogin()" class="btn-app">Se connecter</button>
+                            <p *ngIf="error" class="text-error">{{ error }}</p>
                         </div>
                     </div>
                 </fieldset>

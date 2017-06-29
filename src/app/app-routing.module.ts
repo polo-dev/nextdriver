@@ -9,6 +9,7 @@ import { TestComponent } from 'app/component/test';
 import { QuestionInfoComponent } from 'app/component/question_info.component';
 import { AnswerComponent } from 'app/component/answer.component';
 import { AvailabilityComponent } from 'app/component/availability.component';
+import { HowComponent } from 'app/component/how.component';
 
 
 const appRoutes: Routes = [
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
   { path: 'questions/info', component: QuestionInfoComponent },
   { path: 'test', component: TestComponent },
   { path: 'questions/resultat', component: AnswerComponent},
-  { path: 'inscription/availability', component: AvailabilityComponent }
+  { path: 'inscription/availability', component: AvailabilityComponent },
+  { path: 'how', component: HowComponent}
 ];
 
 @NgModule({

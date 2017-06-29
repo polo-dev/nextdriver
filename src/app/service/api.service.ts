@@ -13,10 +13,21 @@ export class ApiService {
     private localStorageService: LocalStorageService
   ) {}
 
-  private url = 'http://alive.romain-valin.fr/web/user/';
+  private url = 'http://alive.romain-valin.fr/web/';
+
+  connection(data): Promise<any>{
+    let urlPost = 'user/login';
+
+    let urlSearchParams = new URLSearchParams();
+    urlSearchParams.append("form[plain_password]", data.password);
+    urlSearchParams.append("form[email]", data.email);
+    let param = urlSearchParams.toString();
+
+    return this.postData(param, urlPost);
+  }
 
   createAccount(data): Promise<any>{
-    let urlPost = 'register/1';
+    let urlPost = 'user/register/1';
     
     let urlSearchParams = new URLSearchParams();
     urlSearchParams.append("form[plain_password]", data.password);
@@ -29,16 +40,26 @@ export class ApiService {
   }
 
   createAccount2(data): Promise<any>{
-    let urlPost = 'register/2';
+    let urlPost = 'user/register/2';
 
     let urlSearchParams = new URLSearchParams();
-    urlSearchParams.append("form[userId]", this.getUserId());
+    urlSearchParams.append("userId", this.getUserId());
     urlSearchParams.append("form[birthDate]", data.birthDate);
     urlSearchParams.append("form[civility]", data.civility);
     urlSearchParams.append("form[phoneNumber]", data.phoneNumber);
     urlSearchParams.append("form[address]", data.address);
     let param = urlSearchParams.toString();
 
+    return this.postData(param, urlPost);
+  }
+
+  getQuestions(): Promise<any>{
+    let urlPost = 'exam/questions';
+
+    let urlSearchParams = new URLSearchParams();
+    urlSearchParams.append("userId", this.getUserId());
+    let param = urlSearchParams.toString();
+    
     return this.postData(param, urlPost);
   }
 
@@ -55,14 +76,14 @@ export class ApiService {
       .catch();
   }
 
+  // local storage
   getUserId(): any {
     if(this.localStorageService.isSupported) 
     {
       console.log(this.localStorageService.get('user'));
       return this.localStorageService.get('user');
     }
-
-    return 'error';
+    return false;
   }
 
   setUserId(id): any {
