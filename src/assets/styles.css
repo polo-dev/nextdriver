@@ -8,7 +8,7 @@
 /* logo */
 .logo-div {
   height: 40vh;
-  display: flex; 
+  display: flex;
 }
 .logo-div .logo {
     margin: auto;
@@ -33,7 +33,7 @@
   padding: 0px 15px 0px 15px;
   border: solid #00DFFC 2px;
   text-decoration: none;
-} 
+}
 
 .btn-app:hover {
   text-decoration: none;
@@ -193,4 +193,21 @@ body .container .row{
 
 .pac-item-query {
   color: white !important;
+}
+
+.nav {
+  background-color: #fff;
+  padding: 10px 0px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.nav ul li {
+  width: 20%;
+  text-align: center;
 }
