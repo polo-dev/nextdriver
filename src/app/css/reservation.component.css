@@ -1,3 +1,6 @@
+.container .row {
+  margin-bottom: 75px;
+}
 .dispo .dispo-date h3 {
   margin: auto;
   font-size: 2em; 
@@ -29,7 +32,7 @@
   color: white;
 }
 
-.modal .btn-app {
+.modal-footer .btn-app {
   margin-right: 20px;
 }
 
