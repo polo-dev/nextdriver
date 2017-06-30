@@ -52,7 +52,6 @@ button.btn-app {
 .header-info-question {
   height: 40vh;
   line-height: 30vh;
-  background: url(../../assets/images/header/fond_code.png) no-repeat;
   background-size: cover;
   background-position-y: 100%;
   background-position-x: 50%;

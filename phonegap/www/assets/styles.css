@@ -1,19 +1,46 @@
 .text-error {
    color: #e51c23;
 }
+.align-center {
+  text-align: center;
+}
+
+/* logo */
+.logo-div {
+  height: 40vh;
+  display: flex; 
+}
+.logo-div .logo {
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    background: url(../assets/images/logo/logo-basic-white-moyen.png) no-repeat;
+    background-position-x: 50%;
+    background-size: contain;
+}
 
 .no-padding {
-  padding-left: 0;
-  padding-right: 0; 
+  padding-left: 0!important;
+  padding-right: 0!important;
 }
 .btn-app  {
-  letter-spacing: 0.1em;
-  width: 100%;
-  border-radius: 0;
-  border: none;
-  height: 35px;
-  text-transform: uppercase;
-  font-family: Futura_Demi_Reg, sans-serif;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #00DFFC;
+  background: transparent;
+  font-size: 20px;
+  padding: 0px 15px 0px 15px;
+  border: solid #00DFFC 2px;
+  text-decoration: none;
+} 
+
+.btn-app:hover {
+  text-decoration: none;
+}
+
+input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus {
+    box-shadow: none !important;
 }
 
 label.control-label {
@@ -50,12 +77,34 @@ a.link-button:active {
     text-align: center;
     height: 15vh;
     /*background-color: grey;*/
-    background: url(../assets/images/header/dribbble-backgrounds_thumb.jpg);
+    background: url(../assets/images/header/fond_inscription.png);
     line-height: 15vh;
     font-size: 2.6em;
     color: white;
     text-transform: uppercase;
     font-family: Futura_Demi_Reg, sans-serif;
+}
+.header-questions {
+  text-align: center;
+  height: 15vh;
+  /*background-color: grey;*/
+  background: url(../assets/images/header/fond_code.png);
+  line-height: inherit;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  font-family: Futura_Demi_Reg, sans-serif;
+}
+
+.header-result {
+ text-align: center;
+  height: 15vh;
+  background: url(../assets/images/header/fond_resultat.png);
+  line-height: inherit;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  font-family: Futura_Demi_Reg, sans-serif;
 }
 
 /*group hr block with text*/
@@ -81,8 +130,20 @@ hr {
   border-top: 1px solid whitesmoke;
 }
 
-input.form-control, input[type=text] {
-    color: white;
+input.form-control.input-app {
+    color: #00DFFC;
+    box-shadow: none;
+    border-bottom: solid 1px #00DFFC;
+}
+input.form-control.input-app::placeholder {
+    color: #00DFFC;
+}
+.radio label, .radio-inline label, .checkbox label, .checkbox-inline label {
+    color: #00DFFC;
+}
+
+input[type="radio"]:before, .radio input[type="radio"]:before, .radio-inline input[type="radio"]:before {
+  background-color: #00DFFC !important;
 }
 
 /* special */
@@ -97,7 +158,35 @@ input.form-control, input[type=text] {
 }
 
 body {
-    background: url(../assets/images/background.png);
-    background-size: cover;
+    background-image: url('../assets/images/fond app.jpg');
+    background-position: center top;
+    background-size: 102% 100%;
     font-family: Futura_Book_Reg;
+}
+body .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100% !important;
+}
+body .container .row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.pac-item {
+  border-top: 1px solid #009688 !important;
+  border-left: 1px solid #009688 !important;
+  border-right: 1px solid #009688 !important;
+}
+
+.pac-item-selected {
+  background-color:  #009688 !important;
+}
+
+.pac-container {
+    background-color: #14202b !important;
+}
+
+.pac-item-query {
+  color: white !important;
 }

@@ -20,8 +20,8 @@
 }
 
 .no-padding {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 0!important;
+  padding-right: 0!important;
 }
 .btn-app  {
   -webkit-border-radius: 28;
@@ -94,6 +94,10 @@ a.link-button:active {
   color: white;
   text-transform: uppercase;
   font-family: Futura_Demi_Reg, sans-serif;
+}
+
+.header-questions-info {
+  background: url(../assets/images/header/fond_code.png) no-repeat;
 }
 
 .header-result {
