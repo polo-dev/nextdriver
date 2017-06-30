@@ -35,8 +35,7 @@ button.btn-app-big {
 }
 
 button.btn-app {
-  width: 45%;
-  max-width: 150px;
+  width: 60%;
   margin: auto;
 }
 
@@ -119,6 +118,7 @@ span.letter-question {
 }
 .answer p {
   margin: auto;
+  width: 80%;
 }
 .answer span.glyphicon {
   left: -5vw;

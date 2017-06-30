@@ -3,10 +3,11 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import {OnsenModule} from 'ngx-onsenui';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { AgmCoreModule } from "@agm/core";
 import { LocalStorageModule } from 'angular-2-local-storage';
+import { ModalModule } from 'angular2-modal';
+import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
 
 import { AppRoutingModule }        from './app-routing.module';
 import { InscriptionComponent } from './component/inscription.component';
@@ -20,6 +21,7 @@ import { AvailabilityComponent } from 'app/component/availability.component';
 import { HowComponent } from 'app/component/how.component';
 import { DashboardComponent } from 'app/component/dashboard.component';
 import { CreditComponent } from 'app/component/credit.component';
+import { ReservationComponent } from 'app/component/reservation.component';
 
 import { ApiService } from 'app/service/api.service';
 
@@ -37,14 +39,16 @@ import { ApiService } from 'app/service/api.service';
     AvailabilityComponent,
     HowComponent,
     DashboardComponent,
-    CreditComponent
+    CreditComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    OnsenModule,
+    ModalModule.forRoot(),
+    BootstrapModalModule,
     AgmCoreModule.forRoot({
       apiKey: "AIzaSyAu2VNTjUAkY8LunWGSqqtKzYXmeOYbf1A",
       libraries: ["places"]

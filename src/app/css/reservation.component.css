@@ -1,0 +1,42 @@
+.dispo .dispo-date h3 {
+  margin: auto;
+  font-size: 2em; 
+}
+.dispo .dispo-date {
+  height: 60px;
+  line-height: 60px;
+  background: white;
+  border-radius: 10px;
+  padding: 0px 10px;
+  display: flex;
+  margin: 40px 0 20px;
+}
+
+.dispo .dispo-indi {
+  height: 50px;
+  background: #008C9E;
+  border-radius: 10px;
+  padding: 0px 10px;
+  display: flex;
+  margin: 10px 0;
+  color: white;
+  text-align: center;
+}
+
+.dispo .dispo-indi h4 {
+  margin: auto;
+  font-size: 1.9em;
+  color: white;
+}
+
+.modal .btn-app {
+  margin-right: 20px;
+}
+
+.header-inscription {
+    height: 35vh;
+    line-height: 25vh;
+    background-position-y: 90%;
+    background-position-x: 50%;
+    background-size: 110% auto;
+}

@@ -35,7 +35,7 @@ export class AvailabilityComponent implements OnInit {
     });
     if(a.length == 0 && b == 0)
     {
-      location.reload();
+      window.location.reload(true);
     }
     console.log(this.availability);
   }
