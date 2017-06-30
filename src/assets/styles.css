@@ -196,8 +196,12 @@ body .container .row{
 }
 
 .nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background-color: #fff;
-  padding: 10px 0px;
+  padding: 5px 0px;
 }
 
 .nav ul {
