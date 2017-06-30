@@ -1,6 +1,11 @@
 .container .row {
   margin-bottom: 75px;
 }
+
+.btn-app {
+  margin-right: 20px;
+}
+
 .dispo .dispo-date h3 {
   margin: auto;
   font-size: 2em; 
@@ -30,10 +35,6 @@
   margin: auto;
   font-size: 1.9em;
   color: white;
-}
-
-.modal-footer .btn-app {
-  margin-right: 20px;
 }
 
 .header-inscription {
