@@ -1,3 +1,221 @@
 .text-error {
    color: #e51c23;
 }
+.align-center {
+  text-align: center;
+}
+
+/* logo */
+.logo-div {
+  height: 40vh;
+  display: flex;
+}
+.logo-div .logo {
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    background: url(../assets/images/logo/logo-basic-white-moyen.png) no-repeat;
+    background-position-x: 50%;
+    background-size: contain;
+}
+
+.no-padding {
+  padding-left: 0!important;
+  padding-right: 0!important;
+}
+.btn-app  {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #00DFFC;
+  background: transparent;
+  font-size: 20px;
+  padding: 0px 15px 0px 15px;
+  border: solid #00DFFC 2px;
+  text-decoration: none;
+}
+
+.btn-app:hover {
+  text-decoration: none;
+}
+
+input.form-control:focus, input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, input[type=number]:focus, [type=text].form-control:focus, [type=password].form-control:focus, [type=email].form-control:focus, [type=tel].form-control:focus, [contenteditable].form-control:focus {
+    box-shadow: none !important;
+}
+
+label.control-label {
+  width: 50%;
+  /*background-color: grey;*/
+  padding-left: 2px;
+  margin-left: 15px;
+  color: white;
+}
+
+.link-button {
+    display: block;
+    line-height: 35px;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: grey;
+    height: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: Futura_Demi_Reg, sans-serif;
+}
+a.link-button:focus {
+  text-decoration: none;
+  color: white;
+}
+a.link-button:active {
+  text-decoration: none;
+  color: white;
+}
+
+.header-inscription {
+    text-align: center;
+    height: 15vh;
+    /*background-color: grey;*/
+    background: url(../assets/images/header/fond_inscription.png);
+    line-height: 15vh;
+    font-size: 2.6em;
+    color: white;
+    text-transform: uppercase;
+    font-family: Futura_Demi_Reg, sans-serif;
+}
+.header-questions {
+  text-align: center;
+  height: 15vh;
+  /*background-color: grey;*/
+  background: url(../assets/images/header/fond_code.png);
+  line-height: inherit;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  font-family: Futura_Demi_Reg, sans-serif;
+}
+
+.header-questions-info {
+  background: url(../assets/images/header/fond_code.png) no-repeat;
+}
+
+.header-result {
+ text-align: center;
+  height: 15vh;
+  background: url(../assets/images/header/fond_resultat.png);
+  line-height: inherit;
+  font-size: 1em;
+  color: white;
+  text-transform: uppercase;
+  font-family: Futura_Demi_Reg, sans-serif;
+}
+
+/*group hr block with text*/
+.hr-right {
+  width: 40%;
+  float: right;
+  display: inline-block;
+}
+.hr-left {
+  width: 40%;
+  float: left;
+  display: inline-block;
+}
+.hr-text {
+  display: inline-block;
+  text-align: center;
+  margin-top: 11px;
+  width: 20%;
+  font-family: Futura_Book_Reg, sans-serif;
+}
+
+hr {
+  border-top: 1px solid whitesmoke;
+}
+
+input.form-control.input-app {
+    color: #00DFFC;
+    box-shadow: none;
+    border-bottom: solid 1px #00DFFC;
+}
+input.form-control.input-app::placeholder {
+    color: #00DFFC;
+}
+.radio label, .radio-inline label, .checkbox label, .checkbox-inline label {
+    color: #00DFFC;
+}
+
+input[type="radio"]:before, .radio input[type="radio"]:before, .radio-inline input[type="radio"]:before {
+  background-color: #00DFFC !important;
+}
+
+/* special */
+.link-franceconnect {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-image: url(../assets/images/button/fc_logo_v2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+body {
+    background-image: url('../assets/images/fond app.jpg');
+    background-position: center top;
+    background-size: 102% 100%;
+    font-family: Futura_Book_Reg;
+}
+body .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100% !important;
+}
+body .container .row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.pac-item {
+  border-top: 1px solid #009688 !important;
+  border-left: 1px solid #009688 !important;
+  border-right: 1px solid #009688 !important;
+}
+
+.pac-item-selected {
+  background-color:  #009688 !important;
+}
+
+.pac-container {
+    background-color: #14202b !important;
+}
+
+.pac-item-query {
+  color: white !important;
+}
+
+.nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 5px 0px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.nav ul li {
+  width: 20%;
+  text-align: center;
+}
+
+.nav-fill {
+  height: 70px;
+}

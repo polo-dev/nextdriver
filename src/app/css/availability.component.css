@@ -1,0 +1,46 @@
+.bi-availability td {
+    border: 2px solid rgba(0, 0, 0, 0.19);
+}
+
+#availability {
+  padding: 0 6px;
+  color: white;
+}
+
+#availability tbody {
+  font-size: 0.85em;
+}
+
+#availability .NO {
+    background-color: #f4f7f7;;
+} 
+
+#availability table td, #availability table th, #howItWorks .costs table, #howItWorks .costs tbody {
+    text-align: center;
+}
+
+#availability table td:hover, #availability table th:hover {
+    color: #5a2149;
+    background-color: #00DFFE;
+}
+
+#availability .YES {
+    background-color: #00DFFE!important;
+}
+
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 7px;
+}
+
+.table>tbody>tr>th {
+    border-top: none;
+}
+
+.header-inscription {
+    height: 30vh;
+    line-height: 20vh;
+    background-position-x: 50%;    
+    background-position-y: 95%;
+    background-size: 105% auto;
+    background-repeat: no-repeat;
+}

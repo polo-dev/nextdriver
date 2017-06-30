@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="row" *ngIf="dataLoad">
+        <div class="header-questions">
+            <p *ngIf="questions">{{ questions.question}}</p>
+            <a routerLink="../inscription/availability" routerLinkActive="active">
+                <span class="exit" aria-hidden="true" style="text-transform: capitalize">Skip</span>
+            </a>
+            <span class="turn">{{ turn + 1 }}</span>
+        </div>
+        <form class="form-horizontal" #loginForm="ngForm">
+            <fieldset *ngIf="listAnswers">
+                <div *ngFor="let a of listAnswers; let i = index" class="answer-block">
+                    <div class="answer" [ngClass]="{'active' : selectedIdx === i }" (click)="selectItem(i,a)">
+                        <span class="letter-question">{{ getChar(i) }}</span>
+                        <p>{{ a }}</p>
+                        <span *ngIf="selectedIdx === i" class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+        <div class="block-rep align-center">
+            <button class="btn-app" (click)="submitQuestion()">
+                Répondre
+            </button>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

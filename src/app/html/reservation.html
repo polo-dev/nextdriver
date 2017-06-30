@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="header-inscription">
+        {{title}}
+    </div>
+    <div class="col-xs-12" style="margin-top: -70px;">
+      <div class="dispo" *ngFor='let d of day; let i = index'>
+          <div class="dispo-date">
+            <h3>{{ d.day}}</h3>
+          </div>
+          <div class="dispo-indi" *ngFor='let t of d.times' (click)="onReservation(d, t)">
+            <h4>{{ t }}</h4>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="nav">
+  <ul>
+    <li>
+      <img src="../../assets/images/icons/planning.svg" height="30" width="30" /><br />
+      Dispo
+    </li>
+    <li>
+      <img src="../../assets/images/icons/histo.svg" height="30" width="30" /><br />
+      Histo
+    </li>
+    <li>
+     <a routerLink="/dashboard" routerLinkActive="active"><img src="../../assets/images/logo/logo-basic-blue-large.png" height="50" /></a>
+    </li>
+    <li>
+      <img src="../../assets/images/icons/code.svg" height="30" width="30" /><br />
+      Code
+    </li>
+    <li>
+      <a routerLink="/reservation" routerLinkActive="active"><img src="../../assets/images/icons/planning.svg" height="30" width="30" />
+      </a><br />
+      Cours
+    </li>
+  </ul>
+</nav>

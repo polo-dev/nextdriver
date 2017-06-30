@@ -1,0 +1,80 @@
+
+<div class="container">
+  <div class="row">
+    <div class="dashboard-progression">
+
+      <a class="btn-user"><img src="../../assets/images/icons/connection.png" width="50" height="50"/> </a>
+
+      <div class="result-percentage">
+        <div class="c100 p{{progression.total}} big percentage">
+          <span>{{progression.total}}%</span>
+          <div class="slice">
+            <div class="bar"></div>
+            <div class="fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-50">
+        <div class="progression">
+          <div class="progression-title">Coding</div>
+          <div class="progression-score">{{progression.code}}%</div>
+          <div class="progression-bloc">
+            <div class="progression-bar p{{progression.code}}"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-50">
+        <div class="progression">
+          <div class="progression-title">Driving</div>
+          <div class="progression-score">{{progression.driving}}%</div>
+          <div class="progression-bloc">
+            <div class="progression-bar p{{progression.driving}}"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <div class="dashboard-block" *ngIf="nextCourse != null">
+    Prochain cours<br />
+    {{nextCourse.date}} à {{nextCourse.hour}}<br />
+    {{nextCourse.place}}<br />
+  </div>
+
+  <div class="dashboard-block" *ngIf="examDate != null">
+    Votre examen est prévu le {{examDate}}
+  </div>
+  <br />
+  <img class="dashboard-grap" src="../../assets/images/graphic.png" width="345">
+</div>
+
+<nav class="nav">
+  <ul>
+    <li>
+      <img src="../../assets/images/icons/planning.svg" height="30" width="30" /><br />
+      Dispo
+    </li>
+    <li>
+      <img src="../../assets/images/icons/histo.svg" height="30" width="30" /><br />
+      Histo
+    </li>
+    <li>
+      <img src="../../assets/images/logo/logo-basic-blue-large.png" height="50" />
+    </li>
+    <li>
+      <img src="../../assets/images/icons/code.svg" height="30" width="30" /><br />
+      Code
+    </li>
+    <li>
+      <a routerLink="/reservation" routerLinkActive="active"><img src="../../assets/images/icons/planning.svg" height="30" width="30" />
+      </a><br />
+      Cours
+    </li>
+  </ul>
+</nav>
+<div class="nav-fill"></div>
+
+<router-outlet></router-outlet>
