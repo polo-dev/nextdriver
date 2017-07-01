@@ -1,0 +1,53 @@
+
+<div class="container">
+    <div class="row">
+        <div class="header-inscription">
+            {{title}}
+        </div>
+        <div class="col-xs-10 col-xs-offset-1">
+            <form class="form-horizontal" #inscriptionForm="ngForm">
+                <fieldset>
+                    <div class="form-group" [ngClass]="{'has-error' : firstnameError == true }">
+                        <!--<label for="firstname" class="col-xs-12 col-lg-2 control-label">Prénom</label>-->
+                        <div class="col-xs-12 col-lg-10">
+                            <input required type="text" class="form-control input-app" id="firstname" placeholder="Prénom" name="firstname" 
+                            [(ngModel)]="firstname" minlength="2" maxlength="30" autocomplete="new-password">
+                            <p *ngIf="firstnameError" class="text-error">Votre prénom doit être compris entre 2 et 30 charatères</p>
+                        </div>
+                    </div>
+                     <div class="form-group" [ngClass]="{'has-error' : lastnameError == true }">
+                        <!--<label for="lastname" class="col-xs-12 col-lg-2 control-label">Nom</label>-->
+                        <div class="col-xs-12 col-lg-10">
+                            <input required type="text" class="form-control input-app" id="lastname" name="lastname" placeholder="Nom" 
+                            [(ngModel)]="lastname" minlength="2" maxlength="30" autocomplete="new-password">
+                            <p *ngIf="lastnameError" class="text-error">Votre nom doit être compris entre 2 et 30 charatères</p>
+                        </div>
+                    </div>
+                     <div class="form-group" [ngClass]="{'has-error' : emailError == true }">
+                        <!--<label for="email" class="col-xs-12 col-lg-2 control-label">Email</label>-->
+                        <div class="col-xs-12 col-lg-10">
+                            <input required type="email" class="form-control input-app" id="email" name="email" placeholder="Email" 
+                            [(ngModel)]="email" minlength="4" maxlength="40" autocomplete="new-password">
+                            <p *ngIf="emailError" class="text-error">Vérifier votre adresse email</p>
+                        </div>
+                    </div>
+                    <div class="form-group" [ngClass]="{'has-error' : passwordError == true }">
+                        <!--<label for="password" class="col-xs-12 col-lg-2 control-label">Mot de passe</label>-->
+                        <div class="col-lg-10">
+                            <input required type="password" class="form-control input-app" id="password" name="password" placeholder="Mot de passe" 
+                            [(ngModel)]="password" minlength="6" maxlength="40" autocomplete="new-password">
+                            <p *ngIf="passwordError" class="text-error">Votre mot de passe doit contenir au moins 6 charatères</p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-10 col-lg-offset-2 align-center">
+                            <button type="submit" (click)="submitInscription()" class="btn-app">Valider</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

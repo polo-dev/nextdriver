@@ -1,0 +1,39 @@
+.header-inscription {
+  height: 45vh;
+  background-position-y: 90%;
+  background-position-x: 50%;
+  background-size: 110% auto;
+}
+
+.btn-app {
+  padding: 3px 10px;
+}
+button.btn-app {
+  line-height: 25px;
+  margin-top: 2vh;
+}
+
+hr {
+  border-color: #00DFFC;
+}
+
+.hr-text {
+  color: #00DFFC;
+}
+
+.logo-div {
+  height: 30vh;
+}
+
+.link-franceconnect {
+  margin: auto;
+  width: 70%;
+  /*-webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #00DFFC;
+  font-size: 20px;
+  padding: 0px 15px 0px 15px;
+  border: solid #00DFFC 2px;
+  text-decoration: none;*/
+}

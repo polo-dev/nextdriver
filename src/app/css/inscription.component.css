@@ -1,0 +1,13 @@
+
+form .form-group {
+  margin-bottom: 0;
+  height: 13vh;
+}
+
+.header-inscription {
+    height: 35vh;
+    line-height: 25vh;
+    background-position-y: 90%;
+    background-position-x: 50%;
+    background-size: 110% auto;
+}

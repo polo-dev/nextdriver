@@ -1,0 +1,138 @@
+.content-info-test p{
+  color: white;
+}
+.block-info-test {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12vh;
+  font-size: 1.3em;
+  margin-top: 1vh;
+}
+
+.block-take-test {
+  text-align: center;
+  margin-bottom: 6vh;
+}
+
+.logo-div {
+  height: 100%;
+}
+.logo-div .logo {
+  height: 180;
+}
+
+button.btn-app-big {
+  border-radius: 28px;
+  /* font-family: Arial; */
+  color: #00DFFC;
+  background: transparent;
+  font-size: 1.6em;
+  padding: 5px 20px 5px 20px;
+  border: solid #00DFFC 2px;
+  text-decoration: none;
+  width: 80%;
+  height: 60px;
+}
+
+button.btn-app {
+  width: 60%;
+  margin: auto;
+}
+
+.header-inscription {
+  height: 40vh;
+  line-height: 30vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+  background-position-x: 50%;
+  background-position-y: 50%;
+}
+
+.header-info-question {
+  height: 40vh;
+  line-height: 30vh;
+  background-size: cover;
+  background-position-y: 100%;
+  background-position-x: 50%;
+}
+
+/* questions */
+.header-questions {
+  height: 35vh;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  background-size: cover;
+  background-position-y: 95%;
+  display: flex;
+
+}
+.header-questions p {
+  padding: 0 40px;
+  margin: auto;
+  margin-top: 15%;
+}
+.header-questions span.exit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #00DFFC;
+}
+.header-questions span.turn {
+  position: absolute;
+  left: 5vw;
+  top: 30vh;
+  font-size: 1.4em;
+}
+
+span.letter-question {
+  line-height: 10vh;
+  position: relative;
+  left: 20px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+.answer-block {
+  height: 100%;
+  height: 12vh;
+}
+.answer {
+  display: flex;
+  text-align: center;
+  height: 10vh;
+  margin-top: 1vh;
+  border: none;
+  background-color: rgba(44, 62, 80, 0.7);
+  color: white;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.answer.active {
+  background-color: rgba(41, 128, 185, 0.5);
+  color: white;
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  -moz-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+}
+.answer p {
+  margin: auto;
+  width: 80%;
+}
+.answer span.glyphicon {
+  left: -5vw;
+  top: 4vh;
+  color: white;
+}
+.block-rep {
+  height: 10vh;
+  display: flex;
+}
+
+.block-rep .rep {
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
